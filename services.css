@@ -133,13 +133,11 @@ a {
 .services-container .left-content .get-started a:hover svg,
 .services-container .left-content .get-started a:focus svg {
     animation: arrowAnimation cubic-bezier(.645, .045, .355, 1) .35s;
-    /* transform: rotate(90deg) translateY(-10px); */
 }
 
 .services-container .left-content .get-started a p {
     font-size: 1rem;
     width: max-content;
-    /* word-break: keep-all; */
 }
 
 .services-container .left-content .get-started a svg {
@@ -171,7 +169,7 @@ a {
     align-items: center;
     justify-content: space-around;
     gap: 1rem;
-    width: 100%;
+    width: min-content;
 }
 
 .services-container .right-side .column {
