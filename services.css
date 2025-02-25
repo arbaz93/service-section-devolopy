@@ -100,7 +100,8 @@ a {
 }
 
 .services-container .left-content .get-started p {
-    font-size: 1.4rem;
+    font-size: calc(1.2rem + .25*((100vw - 576px) / 864));
+
     font-weight: 600;
     color: white;
 }
@@ -113,6 +114,7 @@ a {
     font-weight: 600;
     min-height: 3rem;
     font-size: .95em;
+    font-size: calc(.95rem + .25*((100vw - 576px) / 864));
     line-height: 1.5rem;
     letter-spacing: -.01em;
     white-space: nowrap;
@@ -195,15 +197,12 @@ a {
 
     left: 50%;
     transform: translateX(-50%);
-    /* background-color: black; */
 }
 .services-container .right-side .column.tree::before {
     bottom: 100%;
-    /* background-color: red; */
 }
 .services-container .right-side .column.tree::after {
     top: 100%;
-    /* background-color: red; */
 }
 
 .services-container .right-side .column .item-wrapper {
@@ -229,21 +228,6 @@ a {
     margin-left: auto;
 }
 
-/* .services-container .right-side .column .item {
-    border-radius: var(--border-r);
-    max-width: 200px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;  
-    padding: 1rem;
-    transition: transform 200ms cubic-bezier(.645, .045, .355, 1);
-    transition: all 200ms linear;
-}
-.services-container .right-side .column .item:hover {
-    transform: scale(1.2);
-}
-.services-container .right-side .column .item h5 {
-    font-size: calc(1rem + .25*((100vw - 576px) / 864));
-
-} */
 .services-container .right-side .column .item-wrapper {
     display: grid;
     grid-template-rows: .18fr;
@@ -345,9 +329,36 @@ a {
         width: 100%;
         max-width: max-content;
     }
+    .services-container .right-side {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: space-around;
+        gap: 1rem;
+        width: 100%;
+    }
+    
+    .services-container .right-side .column .item-wrapper::before {
+        display: none;
+    }
+    .services-container .right-side .column .item-wrapper .item {
+        width: 100%;
+        min-width: auto;
+    }
+    .services-container .right-side .column.tree {
+       display: none;
+    }
     .services-container .right-side .column .item .heading {
         font-size: calc(1.2rem + .25*((100vw - 576px) / 864));
 
     }
-    
+    .services-container .left-content .get-started {
+        padding: 1.2rem ;
+        justify-content: space-between;
+
+    }
+    .services-container .left-content .get-started a {
+        padding: 0 .8rem;
+
+
+    }
 }
